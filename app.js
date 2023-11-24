@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
 		};
 	// second event-listener that will listen for message from client
 	// passing a string event-listener, and function that will grab message from client, and display in log message
-	socket.listen('message-from-client', (msg) => {
+	socket.on('message-from-client', (msg) => {
 		console.log(`message-from-client: ${msg}`);
 	});
 });
