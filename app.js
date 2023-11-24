@@ -25,14 +25,14 @@ io.on('connection', (socket) => {
 
 	// use emit in on method as our primary method of handling events in socket.io
 	// passing a string event-listener, and JSON object - sending greeting message send from server
-	socket.emit('message-from-server'),
-		{
-			greeting: 'Hello from server',
-		};
+	socket.emit('message-from-server', {
+		greeting: 'Hello from server',
+	});
 	// second event-listener that will listen for message from client
 	// passing a string event-listener, and function that will grab message from client, and display in log message
 	socket.on('message-from-client', (msg) => {
-		console.log(`message-from-client: ${msg}`);
+		// console.log(`message-from-client:`);
+		console.log(msg);
 	});
 });
 
