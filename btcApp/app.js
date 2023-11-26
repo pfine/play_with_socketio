@@ -5,8 +5,8 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var port = 8080;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(port, function() {
-  console.log("Listening on port " + port);
+server.listen(port, function () {
+	console.log(`Listening on port: http://localhost:${port}`);
 });
